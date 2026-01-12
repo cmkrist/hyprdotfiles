@@ -1,0 +1,17 @@
+# Application Folders
+BraveSoftware
+chromium
+Code - OSS
+dconf
+go
+gtk-3.0
+libvirt
+micro
+pulse
+session
+vesktop
+
+# Binary Files / Secure Files
+cookie
+kwalletrc
+nohup.out
