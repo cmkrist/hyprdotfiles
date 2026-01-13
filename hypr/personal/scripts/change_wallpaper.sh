@@ -1,13 +1,14 @@
 echo "Wallpaper: "
-read WALLPAPER_DIR
+read WALLPAPER_SRC
 # Pipe Directory into ~/.config/hyprpaper.conf
-if [[ -f "$FILE" ]]; then
+if ! [[ -f "$WALLPAPER_SRC" ]]; then
     echo "File does not exist"
     exit
 fi
-WALLPAPER_DIR=$(echo "$WALLPAPER_DIR" | tr -d '"' | tr -d "'")
-sed -i "s|path = .*|path = $WALLPAPER_DIR|" ~/.config/hypr/hyprpaper.conf
+WALLPAPER_SRC=$(echo "$WALLPAPER_SRC" | tr -d '"' | tr -d "'")
+sed -i "s|path = .*|path = $WALLPAPER_SRC|" ~/.config/hypr/hyprpaper.conf
 killall hyprpaper
 wait
 nohup hyprpaper &
-sleep 0.2
+matugen image $WALLPAPER_SRC
+sleep .2

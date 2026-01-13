@@ -51,7 +51,8 @@ yay -S elephant-websearch --noconfirm
 yay -S elephant-windows --noconfirm
 # Walker (App Launcher)
 yay -S walker --noconfirm
-# 
+# Bluetooth
+yay -S overskride --noconfirm
 ####################
 ### APPLICATIONS ###
 ####################
